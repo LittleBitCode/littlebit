@@ -179,6 +179,8 @@ return [
 
         //JWT
         \Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+
+
     ],
 
     /*
