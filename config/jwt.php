@@ -73,7 +73,7 @@ return [
     |
     */
 
-    'user' => \App\Models\Foundation\User::class,
+    'user' => 'App\Models\Foundation\User',
 
     /*
     |--------------------------------------------------------------------------
@@ -133,7 +133,7 @@ return [
         |
         */
 
-        'user' => \Tymon\JWTAuth\Providers\User\EloquentUserAdapter::class,
+        'user' => Tymon\JWTAuth\Providers\User\EloquentUserAdapter::class,
 
         /*
         |--------------------------------------------------------------------------

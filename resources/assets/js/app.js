@@ -5,18 +5,41 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+// require('./bootstrap');
+//
+// window.Vue = require('vue');
+//
+// /**
+//  * Next, we will create a fresh Vue application instance and attach it to
+//  * the page. Then, you may begin adding components to this application
+//  * or customize the JavaScript scaffolding to fit your unique needs.
+//  */
+//
+// Vue.component('example', require('./components/Example.vue'));
+//
+// const app = new Vue({
+//     el: '#app'
+// });
 
-window.Vue = require('vue');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+import Vue from 'vue'
+import Vuetify from 'vuetify'
+import store from '~/store'
+import router from '~/router'
+import { i18n } from '~/plugins'
+import App from '~/components/App'
+import '~/components'
 
-Vue.component('example', require('./components/Example.vue'));
+Vue.use(Vuetify)
 
-const app = new Vue({
-    el: '#app'
-});
+Vue.config.productionTip = false
+
+new Vue({
+    el: '#app',
+    i18n,
+    store,
+    router,
+    ...App
+})
+
+// Vue.prototype.$ajax = axios;
